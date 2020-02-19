@@ -18,11 +18,16 @@ for i in files:
             time.sleep(1)
         for n in range(len(l1)):
             d1[l1[n]]=x[n]
-        new_master = master.append(d1, ignore_index=True)
-        print(new_master)
+        master = master.append(d1, ignore_index=True)
 
+print(master)
+with open('C:/Users/NelsonEnriqueBolanos/Desktop/Python/Move/testfinal.csv','a',newline='') as t:
+    master.to_csv(t, index=False, header=False)
 
+"""
 
-   # with open('C:/Users/NelsonEnriqueBolanos/Desktop/Python/Move/testfinal.csv', 'a', newline='') as p:
-   #     writer = csv.writer(p)
-   #     writer.writerow(df)
+    with open('C:/Users/NelsonEnriqueBolanos/Desktop/Python/Move/testfinal.csv', 'a', newline='') as p:
+        writer = csv.writer(p)
+        writer.writerow(df)
+
+"""
